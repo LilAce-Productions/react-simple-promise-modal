@@ -1,6 +1,6 @@
 {
   "name": "react-simple-promise-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Capture modal responses.",
   "author": "calabashlabsllc",
   "license": "MIT",
@@ -61,7 +61,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.1.0",
+    "jquery": "^3.4.0",
     "popper.js": "^1.16.1"
   }
 }
