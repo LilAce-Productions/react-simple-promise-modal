@@ -179,11 +179,7 @@ var ConfirmPromiseModal = function (_React$Component) {
             React.createElement(
               'p',
               { className: 'modal-delete-msg' },
-              React.createElement(
-                'span',
-                null,
-                this.props.message
-              )
+              this.props.render()
             ),
             this.props.showTextArea ? React.createElement(
               'div',
@@ -267,7 +263,7 @@ var ConfirmPromiseModal = function (_React$Component) {
 ConfirmPromiseModal.propTypes = {
   modalId: PropTypes.string.isRequired,
   labelId: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  render: PropTypes.func.isRequired,
   onRef: PropTypes.func.isRequired,
   yesButton: PropTypes.string,
   noButton: PropTypes.string,

@@ -62,7 +62,7 @@ export default class ConfirmPromiseModal extends React.Component {
         <div className="row">
           <div className="modal-form-wrap text-center">
             <p className="modal-delete-msg">
-              <span>{this.props.message}</span>
+              {this.props.render()}
             </p>
             {this.props.showTextArea
               ? <div className="form-group">
@@ -118,7 +118,7 @@ export default class ConfirmPromiseModal extends React.Component {
 ConfirmPromiseModal.propTypes = {
   modalId: PropTypes.string.isRequired,
   labelId: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  render: PropTypes.func.isRequired,
   onRef: PropTypes.func.isRequired,
   yesButton: PropTypes.string,
   noButton: PropTypes.string,

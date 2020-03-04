@@ -28,6 +28,12 @@ const ACTION = {
     CONFIRM: 'Submit',
     CANCEL: 'Cancel'
   },
+  COMPONENT: {
+    DESC: 'component',
+    MSG: <i className="glyphicon glyphicon-tasks" style={{ fontSize: '30px' }} />,
+    CONFIRM: 'Okay',
+    CANCEL: 'Cancel'
+  },
   DEFAULT: {
     DESC: 'default',
     MSG: 'Are you sure you want to perform this action?',
@@ -83,6 +89,11 @@ class App extends Component {
           })
         );
         break;
+      case ACTION.COMPONENT.DESC:
+        this.setState({ buttonMsg: ACTION.COMPONENT.MSG, yesButton: ACTION.COMPONENT.CONFIRM, noButton: ACTION.COMPONENT.CANCEL, showTextArea: false }, () =>
+          this.confirmModalRef.show()
+        );
+      break;
       default:
         break;
     }
@@ -105,13 +116,16 @@ class App extends Component {
         <div className="button-row">
           <button className={`demo-button ${this.state.colorChanged ? 'changed-color' : 'normal-color'}`} onClick={() => this.handleConfirm(ACTION.COLOR.DESC)}>Button Color Exchange</button>
         </div>
+        <div className="button-row">
+          <button className="demo-button" onClick={() => this.handleConfirm(ACTION.COMPONENT.DESC)}>Glyphicon-Task Icon on Modal</button>
+        </div>
         <ConfirmPromiseModal
           onRef={ref => (this.confirmModalRef = ref)}
           modalId={`action-${keyIndex}`}
           labelId={`label-${keyIndex}`}
           yesButton={this.state.yesButton}
           noButton={this.state.noButton}
-          message={this.state.buttonMsg}
+          render={typeof this.state.buttonMsg === 'string' ? () => <span>{this.state.buttonMsg}</span> : () => this.state.buttonMsg}
           showTextArea={this.state.showTextArea}
         />
       </div>
