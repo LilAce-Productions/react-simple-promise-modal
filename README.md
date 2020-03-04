@@ -1,6 +1,6 @@
 ## Thanks for visiting
 
-A react modal that can be used to capture a user's response to the modal. Include prompt for text response. Easy integration. Uses Bootstrap 3. 
+A react customizable modal that can be used to capture a user's response to the modal. Include prompt for text response. Easy integration. Uses Bootstrap 3. 
 
 [Demo](https://calabashlabsllc.github.io/react-simple-promise-modal/)
 
@@ -25,7 +25,7 @@ this.confirmModalRef.show()
 
 For more details, check out the API below.
 
-## Component API
+### Component API
 
 `<ConfirmPromiseModal>` component:
 
@@ -33,12 +33,17 @@ Property | Type | Default | Required | Description
 -------- | ---- | ------- | -------- |-----------
 modalId | `String` | n/a | yes | Unique id for modal
 labelId | `String` | n/a | yes | Unique id for modal title
-message | `String` or `Component` | n/a | yes | Main message on modal
+render | `Function` | n/a | yes | Main message on modal
 onRef | `Function` | n/a | yes | Used to mount for parent usage
 yesButton | `String` | 'Confirm' | no | Text on confirm button
 noButton | `String` | 'Cancel' | no | Text on cancel button
 showTextArea | `Boolean` | false | no | Show textarea input
 title | `String` | 'Notice' | no | Title on modal
+
+Render prop example (String or Component):
+```
+render={typeof this.state.modalMsg === 'string' ? () => <span>{this.state.modalMsg}</span> : () => this.state.modalMsg}
+```
 
 ### Note
 Bootstrap 4 uses possibly will have to hard code any modal styling differences.
@@ -47,6 +52,6 @@ Bootstrap 4 uses possibly will have to hard code any modal styling differences.
 
 Any questions? Check out our [documentation](https://github.com/CalabashLabsLLC/react-simple-promise-modal/blob/master/README.md) or [contact support](https://www.calabashlabs.com/contact) and we’ll help you sort it out.
 
-## License
+### License
 
 MIT © [calabashlabsllc](https://github.com/calabashlabsllc)

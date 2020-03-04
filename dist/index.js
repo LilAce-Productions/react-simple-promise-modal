@@ -181,7 +181,7 @@ var ConfirmPromiseModal = function (_React$Component) {
             'div',
             { className: 'modal-form-wrap text-center' },
             React.createElement(
-              'p',
+              'div',
               { className: 'modal-delete-msg' },
               this.props.render()
             ),

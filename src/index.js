@@ -61,9 +61,9 @@ export default class ConfirmPromiseModal extends React.Component {
       <div className="modal-body">
         <div className="row">
           <div className="modal-form-wrap text-center">
-            <p className="modal-delete-msg">
+            <div className="modal-delete-msg">
               {this.props.render()}
-            </p>
+            </div>
             {this.props.showTextArea
               ? <div className="form-group">
                 <textarea
