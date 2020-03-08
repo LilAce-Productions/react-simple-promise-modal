@@ -117,7 +117,7 @@ class App extends Component {
           <button className={`demo-button ${this.state.colorChanged ? 'changed-color' : 'normal-color'}`} onClick={() => this.handleConfirm(ACTION.COLOR.DESC)}>Button Color Exchange</button>
         </div>
         <div className="button-row">
-          <button className="demo-button" onClick={() => this.handleConfirm(ACTION.COMPONENT.DESC)}>Glyphicon-Task Icon on Modal</button>
+          <button className="demo-button" onClick={() => this.handleConfirm(ACTION.COMPONENT.DESC)}>Glyphicon Component on Modal</button>
         </div>
         <ConfirmPromiseModal
           onRef={ref => (this.confirmModalRef = ref)}
