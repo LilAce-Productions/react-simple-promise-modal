@@ -28,6 +28,8 @@ a:active {
   color: #fff;
   line-height: 35px;
   text-align: left;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .header-slogan {
