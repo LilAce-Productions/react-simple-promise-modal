@@ -94,3 +94,13 @@ a:active {
   color: #00c8b0;
   background-color:  black;
 }
+
+.cl-logo-wrap {
+  display: inline-block;
+  padding: 1em;
+  padding-right: 1.6em;
+}
+
+.github-logo-wrap {
+  float: right;
+}
