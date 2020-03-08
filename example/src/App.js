@@ -103,8 +103,8 @@ class App extends Component {
     return (
       <div>
         <div className="header-top">
-          <img src={logo} width="115px" alt="Calabash Labs Logo" />
-          <a href="https://calabashlabsllc.github.io/react-simple-promise-modal/"><img src={github} className="pull-right" alt="Github Logo" /></a>
+        <div className="cl-logo-wrap"><a href="https://calabashlabsllc.github.io"><img src={logo} width="115px" alt="Calabash Labs Logo" /></a></div>
+          <div className="github-logo-wrap"><a href="https://github.com/CalabashLabsLLC/react-simple-promise-modal/"><img src={github} className="github-logo" alt="Github Logo" /></a></div>
         </div>
         <div className="header"></div>
         <div className="button-row">
